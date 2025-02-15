@@ -1,0 +1,25 @@
+name: Checks on main PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pre-merge-checks:
+    name: Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get Latest Code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Test
+        run: dotnet test ASpaceGame.Tests/ASpaceGame.Tests.csproj --verbosity normal
