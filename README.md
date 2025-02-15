@@ -37,7 +37,7 @@ The _main_ branch is the **production** repository; on this branch only _pull re
 5. New release with changelog
 
 ### develop
-The _develop_ branch is a container for all the developers' activities. Each developer creates a specific issue branch from the _develop_ one and once they have finished their work, they merge everything into this branch. This is basically a container of all **unreleased content**.
+The _develop_ branch is a container for all staging activities. Each developer creates a specific issue branch from the _develop_ one and once they have finished their work, they merge everything into this branch. This is basically a container of all **unreleased content**.
 
 ### Code of Conduct
 
