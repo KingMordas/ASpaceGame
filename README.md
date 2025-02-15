@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Hello and welcome to this Github repository. Let's start by telling you that I am a big Star Trek fan and around the end of the 90s I remember playing a game called **Star Trek Starship Creator Warp II**, by Simon & Schuster Interactive.
+Hello and welcome to this Github repository. Let's start by telling you that I am a big Star Trek fan and around the end of the 90s I remember playing a game called **Star Trek Starship Creator Warp II**.
 
 This game allowed you to create your own starship, with a variety of parts and components, and then take her on missions, either provided by the game or by you, thanks to the included mission editor.
 
