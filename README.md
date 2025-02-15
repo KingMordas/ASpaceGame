@@ -1,5 +1,7 @@
 # ASpaceGame
 
+![Work in Progress](https://img.shields.io/badge/status-WIP-orange)
+
 ## Introduction
 
 Hello and welcome to this Github repository. Let's start by telling you that I am a big Star Trek fan and around the end of the 90s I remember playing a game called **Star Trek Starship Creator Warp II**.
