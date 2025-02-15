@@ -25,6 +25,20 @@ If you wish to contribute to this project, please refer to the [CONTRIBUTING.md]
 
 Be aware that I'm not dedicated 100% of my time to this project, I'm doing this in my spare time, so please be patient if I don't respond immediately or at all; I'll certainly try to do my best.
 
+## List of all default branches
+
+### main
+The _main_ branch is the **production** repository; on this branch only _pull requests_ from the _develop_ branch are accepted. Everytime a push is made on this branch, the associated action activates to perform the following operations:
+
+1. Latest version checkout (from _main_)
+2. Code building
+3. Unit tests execution
+4. Tag creation
+5. New release with changelog
+
+### develop
+The _develop_ branch is a container for all the developers' activities. Each developer creates a specific issue branch from the _develop_ one and once they have finished their work, they merge everything into this branch. This is basically a container of all **unreleased content**.
+
 ### Code of Conduct
 
 Please be respectful and considerate when interacting with others.
