@@ -1,4 +1,4 @@
-name: Auto-Approve PRs
+name: Automerge
 
 on:
   workflow_run:
@@ -7,20 +7,18 @@ on:
       - completed
 
 jobs:
-  auto-approve:
-    if: >
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.pull_request.user.login == 'KingMordas' &&
-      github.event.pull_request.base.ref == 'main' &&
-      github.event.pull_request.head.repo.full_name == github.repository
+  auto-merge:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Debug Info
+        run: |
+          echo "Conclusion: ${{ github.event.workflow_run.conclusion }}"
+          echo "User Login: ${{ github.event.pull_requests[0].user.login }}"
+          echo "Base Ref: ${{ github.event.pull_requests[0].base.ref }}"
 
-      - name: Approve PR
-        uses: hmarr/auto-approve-action@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          review-message: "Auto-approved by KingMordas"
+      - name: Automerge
+        if: >
+          github.event.workflow_run.conclusion == 'success' &&
+          github.event.pull_requests[0].user.login == 'KingMordas' &&
+          github.event.pull_requests[0].base.ref == 'main'
+        run: gh pr merge --merge --auto
