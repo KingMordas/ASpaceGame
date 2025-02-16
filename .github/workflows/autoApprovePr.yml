@@ -9,10 +9,10 @@ on:
 jobs:
   auto-approve:
     if: >
+      github.event.workflow_run.conclusion == 'success' &&
       github.event.pull_request.user.login == 'KingMordas' &&
       github.event.pull_request.base.ref == 'main' &&
-      github.event.pull_request.head.repo.full_name == github.repository &&
-      success()
+      github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
 
     steps:
