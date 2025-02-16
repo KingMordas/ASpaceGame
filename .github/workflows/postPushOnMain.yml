@@ -50,6 +50,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           keep-count: 10
-          keep-old-minor-releases: false
+          keep-old-minor-releases: true
           include-prerelease: true
           remove-tags: true
