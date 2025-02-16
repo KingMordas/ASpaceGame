@@ -44,3 +44,12 @@ jobs:
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           body: ${{ steps.tag_version.outputs.changelog }}
           artifacts: ./Release/ASpaceGame-${{ steps.tag_version.outputs.new_tag }}.zip
+
+      - name: Clean Releases
+        uses: Nats-ji/delete-old-releases@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          keep-count: 10
+          keep-old-minor-releases: false
+          include-prerelease: true
+          remove-tags: true
