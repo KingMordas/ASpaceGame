@@ -51,3 +51,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           keep-count: 10
           keep-old-minor-releases: false
+          include-prerelease: true
+          remove-tags: true
