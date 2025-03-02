@@ -7,10 +7,10 @@
  * LICENSE.md file in the root directory of this source tree.
  */
 
-namespace ASpaceGame.CoreComponents.Attributes;
+namespace ASpaceGame.WPF.Dtos;
 
-public static class GameConstants
+public interface IGameEntityUI
 {
-    public const double OfficerSkillPercModifierForCriticals = 5.00d;
-    public const double IdlePowerConsumptionFactor = 0.10d;
+    Guid? Id { get; set; }
+    string? Name { get; set; }
 }

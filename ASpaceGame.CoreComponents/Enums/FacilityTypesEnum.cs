@@ -1,7 +1,7 @@
 ﻿/*
  * This file is part of ASpaceGame.
  *
- * Copyright (c) 2025 KingMordas
+ * Copyright (c) 2025 KingMordas - https://github.com/KingMordas/ASpaceGame
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE.md file in the root directory of this source tree.
@@ -44,4 +44,7 @@ public enum FacilityTypesEnum
     // Devices: equipment that provides power or propulsion to the ship
     Device_SublightEngine, // Used to move the ship at sublight speeds
     Device_AntimatterEngine, // Used to move the ship at warp speeds
+    Device_PowerCore, // Used to provide power to the ship
+    Device_AuxiliaryPowerCore, // Used to provide backup power to the ship
+    Device_LifeSupport // Used to provide air, water, and food to the crew
 }

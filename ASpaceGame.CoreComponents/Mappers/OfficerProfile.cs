@@ -1,4 +1,4 @@
-﻿/*
+/*
  * This file is part of ASpaceGame.
  *
  * Copyright (c) 2025 KingMordas - https://github.com/KingMordas/ASpaceGame
@@ -7,10 +7,14 @@
  * LICENSE.md file in the root directory of this source tree.
  */
 
-namespace ASpaceGame.CoreComponents.Attributes;
+using AutoMapper;
 
-public static class GameConstants
+namespace ASpaceGame.CoreComponents.Mappers;
+
+public class OfficerProfile : Profile
 {
-    public const double OfficerSkillPercModifierForCriticals = 5.00d;
-    public const double IdlePowerConsumptionFactor = 0.10d;
+    public OfficerProfile()
+    {
+        _ = CreateMap<Officer, Officer>();
+    }
 }

@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Utilities\**" />
+    <EmbeddedResource Remove="Utilities\**" />
+    <None Remove="Utilities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -34,8 +40,6 @@
   <ItemGroup>
     <Folder Include="Attributes\" />
     <Folder Include="Extensions\" />
-    <Folder Include="GameClasses\" />
-    <Folder Include="Utilities\" />
   </ItemGroup>
 
 </Project>
