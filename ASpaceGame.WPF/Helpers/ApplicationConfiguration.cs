@@ -30,28 +30,27 @@ public class ApplicationConfiguration
 
     public void Load()
     {
+        CurrentVersion = LoadVersionFromSettings();
+
         if (!File.Exists(_fileSettings))
         {
-            CurrentVersion = LoadVersionFromSettings();
             RootDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "My Games", "ASpaceGame");
-            Save();
         }
         else
         {
-            CurrentVersion = ReadIniFile("CurrentVersion", "ApplicationInfo");
             if (string.IsNullOrWhiteSpace(CurrentVersion))
             {
                 CurrentVersion = "vUndefined";
-                Save();
             }
 
             RootDir = ReadIniFile("RootDir", "ApplicationInfo");
             if (string.IsNullOrWhiteSpace(RootDir))
             {
                 RootDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "My Games", "ASpaceGame");
-                Save();
             }
         }
+
+        Save();
     }
 
     public void Save()
