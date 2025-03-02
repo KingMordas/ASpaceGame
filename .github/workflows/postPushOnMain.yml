@@ -21,13 +21,20 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Publish
-        run: dotnet publish ASpaceGame.CoreComponents/ASpaceGame.CoreComponents.csproj -o ./Release/ -c Release --verbosity normal
+        run: dotnet publish ASpaceGame.WPF/ASpaceGame.WPF.csproj -o ./Release/ -c Release --verbosity normal
 
       - name: Bump version and push tag
         id: tag_version
         uses: mathieudutour/github-tag-action@v6.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update release in file
+        uses: benday-inc/set-property-value-in-appsettings@main
+        with:
+          pathtosettingsfile: ./Release/WPFSettings.json
+          keyname1: version
+          valuetoset: ${{ steps.tag_version.outputs.new_tag }}
 
       - name: Zip
         id: create_zip
