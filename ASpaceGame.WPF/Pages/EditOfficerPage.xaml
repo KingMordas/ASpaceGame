@@ -1,0 +1,135 @@
+﻿<!--
+ * This file is part of ASpaceGame.
+ *
+ * Copyright (c) 2025 KingMordas - https://github.com/KingMordas/ASpaceGame
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ -->
+
+<Page x:Class="ASpaceGame.WPF.Pages.EditOfficerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ASpaceGame.WPF.Pages"
+      mc:Ignorable="d" 
+      Loaded="Page_Loaded"
+      d:DesignHeight="1440" d:DesignWidth="3440"
+      Title="Edit Officer">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="95*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="95*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="70*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Label Style="{StaticResource LabelCaptionStyle}" Content="Base Info" Margin="5,0,5,0" />
+
+                <Label Name="LblId" Style="{StaticResource LabelCustomStyleSmaller}" Content="{Binding Officer.Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5,5,5,0" />
+
+                <Grid Margin="0,5,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource LabelCustomStyle}" Content="Officer Name: " Margin="5,0,5,0" Grid.Column="0" />
+                    <TextBox Style="{StaticResource TextBoxCustomStyle}" Text="{Binding Officer.Name, Mode=TwoWay}" Margin="5,0,5,0" Grid.Column="1" />
+                </Grid>
+
+                <ComboBox Name="CbRank" Margin="5,5,5,0" Style="{StaticResource ComboBoxCustomStyle}" HorizontalAlignment="Stretch" SelectedValue="{Binding Officer.Rank, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Image Name="ImgOfficer" Margin="5,5,5,0" HorizontalAlignment="Stretch" Source="{Binding Officer.Picture, Mode=Default, UpdateSourceTrigger=PropertyChanged}" Width="300" Height="400" />
+
+                <Button Name="BtnChangePicture" Content="Select New Picture (300x400 pixels for best rendering)" Margin="5,5,5,0" Click="BtnChangePicture_Click" Style="{StaticResource ButtonCustomStyle}" />
+
+                <Grid Margin="0,5,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource LabelCustomStyle}" Content="Biography: " Margin="5,0,5,0" Grid.Column="0" />
+                    <TextBox Style="{StaticResource TextBoxCustomStyle}" Text="{Binding Officer.Biography, Mode=TwoWay}" Margin="5,0,5,0" Grid.Column="1" TextWrapping="Wrap" AcceptsReturn="True" Height="414" />
+                </Grid>
+
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <Label Style="{StaticResource LabelCaptionStyle}" Content="Skills" />
+
+                <Grid Margin="0,5,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource LabelCustomStyle}" Content="Command Skill: " Margin="5,0,5,0" Grid.Column="0" />
+                    <TextBox Style="{StaticResource TextBoxCustomStyle}" Text="{Binding Officer.CommandSkill, Mode=TwoWay}" Margin="5,0,5,0" Grid.Column="1" TextChanged="TextBox_NumberValidation_TextChanged" />
+                </Grid>
+
+                <Grid Margin="0,5,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource LabelCustomStyle}" Content="Science Skill: " Margin="5,0,5,0" Grid.Column="0" />
+                    <TextBox Style="{StaticResource TextBoxCustomStyle}" Text="{Binding Officer.ScienceSkill, Mode=TwoWay}" Margin="5,0,5,0" Grid.Column="1" TextChanged="TextBox_NumberValidation_TextChanged" />
+                </Grid>
+
+                <Grid Margin="0,5,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource LabelCustomStyle}" Content="Operation Skill: " Margin="5,0,5,0" Grid.Column="0" />
+                    <TextBox Style="{StaticResource TextBoxCustomStyle}" Text="{Binding Officer.OperationSkill, Mode=TwoWay}" Margin="5,0,5,0" Grid.Column="1" TextChanged="TextBox_NumberValidation_TextChanged" />
+                </Grid>
+
+                <Grid Margin="0,5,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource LabelCustomStyle}" Content="Engineering Skill: " Margin="5,0,5,0" Grid.Column="0" />
+                    <TextBox Style="{StaticResource TextBoxCustomStyle}" Text="{Binding Officer.EngineeringSkill, Mode=TwoWay}" Margin="5,0,5,0" Grid.Column="1" TextChanged="TextBox_NumberValidation_TextChanged" />
+                </Grid>
+
+                <Grid Margin="0,5,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource LabelCustomStyle}" Content="Medical Skill: " Margin="5,0,5,0" Grid.Column="0" />
+                    <TextBox Style="{StaticResource TextBoxCustomStyle}" Text="{Binding Officer.MedicalSkill, Mode=TwoWay}" Margin="5,0,5,0" Grid.Column="1" TextChanged="TextBox_NumberValidation_TextChanged" />
+                </Grid>
+
+                <Grid Margin="0,5,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource LabelCustomStyle}" Content="Security Skill: " Margin="5,0,5,0" Grid.Column="0" />
+                    <TextBox Style="{StaticResource TextBoxCustomStyle}" Text="{Binding Officer.SecuritySkill, Mode=TwoWay}" Margin="5,0,5,0" Grid.Column="1" TextChanged="TextBox_NumberValidation_TextChanged" />
+                </Grid>
+                
+                <Button Name="BtnSave" Content="Save Officer" Margin="5,20,5,0" VerticalAlignment="Bottom" Click="BtnSave_Click" Style="{StaticResource ButtonCustomStyle}" />
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+
+</Page>

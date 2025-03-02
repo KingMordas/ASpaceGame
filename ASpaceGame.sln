@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASpaceGame.CoreComponents",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASpaceGame.Tests", "ASpaceGame.Tests\ASpaceGame.Tests.csproj", "{CB6864CC-9E2F-4083-BD76-6BF8F41CBE32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASpaceGame.WPF", "ASpaceGame.WPF\ASpaceGame.WPF.csproj", "{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -41,8 +43,23 @@ Global
 		{CB6864CC-9E2F-4083-BD76-6BF8F41CBE32}.Release|x64.Build.0 = Release|Any CPU
 		{CB6864CC-9E2F-4083-BD76-6BF8F41CBE32}.Release|x86.ActiveCfg = Release|Any CPU
 		{CB6864CC-9E2F-4083-BD76-6BF8F41CBE32}.Release|x86.Build.0 = Release|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Debug|x64.Build.0 = Debug|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Debug|x86.Build.0 = Debug|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Release|ARM64.Build.0 = Release|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Release|x64.ActiveCfg = Release|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Release|x64.Build.0 = Release|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Release|x86.ActiveCfg = Release|Any CPU
+		{CCEAAC06-347C-9A92-3550-3B6A2C2027D0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E76CC07A-9220-4DD7-BDED-85D6221C5B3B}
 	EndGlobalSection
 EndGlobal

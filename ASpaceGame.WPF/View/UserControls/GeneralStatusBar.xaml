@@ -1,0 +1,25 @@
+﻿<!--
+ * This file is part of ASpaceGame.
+ *
+ * Copyright (c) 2025 KingMordas - https://github.com/KingMordas/ASpaceGame
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ -->
+
+<UserControl x:Class="ASpaceGame.WPF.View.UserControls.GeneralStatusBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ASpaceGame.WPF.View.UserControls"
+             mc:Ignorable="d" 
+             Height="Auto" d:DesignWidth="800">
+
+    <StackPanel Style="{StaticResource StackPanelCustomStyle}" Orientation="Horizontal">
+        <TextBlock x:Name="TbClock" Text="Loading..." Style="{StaticResource TextBlockCustomStyle}" Padding="5" />
+        <TextBlock Text=" --- " Style="{StaticResource TextBlockCustomStyle}" Padding="5" />
+        <TextBlock x:Name="TbVersion" Text="Loading..." Style="{StaticResource TextBlockCustomStyle}" Padding="5" />
+    </StackPanel>
+    
+</UserControl>

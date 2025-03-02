@@ -7,10 +7,16 @@
  * LICENSE.md file in the root directory of this source tree.
  */
 
-namespace ASpaceGame.CoreComponents.Attributes;
+namespace ASpaceGame.CoreComponents.Enums;
 
-public static class GameConstants
+public enum OfficerRanksEnum
 {
-    public const double OfficerSkillPercModifierForCriticals = 5.00d;
-    public const double IdlePowerConsumptionFactor = 0.10d;
+    Ensign,
+    Lieutenant,
+    LieutenantJuniorGrade,
+    LieutenantCommander,
+    Commander,
+    Captain,
+    Commodore,
+    Admiral
 }

@@ -7,10 +7,17 @@
  * LICENSE.md file in the root directory of this source tree.
  */
 
-namespace ASpaceGame.CoreComponents.Attributes;
+namespace ASpaceGame.WPF.Helpers;
 
-public static class GameConstants
+public enum PagesEnum
 {
-    public const double OfficerSkillPercModifierForCriticals = 5.00d;
-    public const double IdlePowerConsumptionFactor = 0.10d;
+    Open,
+    OfficersList,
+    EditOfficer,
+    FacilitiesList,
+    ShipClassesList,
+    StarshipsList,
+    MissionsList,
+    Settings,
+    About
 }

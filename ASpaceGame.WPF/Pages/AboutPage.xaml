@@ -1,0 +1,66 @@
+﻿<!--
+ * This file is part of ASpaceGame.
+ *
+ * Copyright (c) 2025 KingMordas - https://github.com/KingMordas/ASpaceGame
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ -->
+
+<Page x:Class="ASpaceGame.WPF.Pages.AboutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ASpaceGame.WPF.Pages"
+      mc:Ignorable="d" 
+      Loaded="Page_Loaded"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="About">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <TextBlock Name="TbASpaceGame" Text="ASpaceGame" Style="{StaticResource TextBlockCaptionStyle}" />
+                    
+                    <TextBlock Style="{StaticResource TextBlockDefaultStyle}">
+                        Welcome to <Run Text="ASpaceGame" FontWeight="Bold" />.
+                    </TextBlock>
+                    
+                    <TextBlock Style="{StaticResource TextBlockDefaultStyle}">
+                        ASpaceGame is an attempt to give birth to a game where you can create a starship and send it on different missions that you previously created as well, leaving your imagination as the only barrier. The game aims to achieve the emotion of satisfaction in watching your creations (the starships) travel deep space to engage in difficulties of your own choosing (will your ship be able to scan an anomaly? Will its captain handle the situation based on their skills?).
+                        <LineBreak />
+                        <LineBreak />
+                        ASpaceGame is provided AS-IS, it's a free-time open-source project and it is not a source for profit or anything alike. The images you may find on this project are AI generated (thank you Copilot Pro) or the result of my (pathetic) efforts of doing some graphics and no Copyright violation is intended at all, so should you find something that you feel to be out-of-line, please reach to the developer(s) on GitHub (you may find the link to the original repository below). Do also remember that, by definition of open-source and the MIT license, anyone is entitled to make a copy and modification to this project, without any liability on this project owner (as stated in the MIT license). Should you desire to distribute your own modified copy of this program, please remember to update this page and other references accordingly (i.e. the license statements on each solution file).
+                    </TextBlock>
+                    
+                    <TextBlock Text="This application has been released under the MIT License; you may find its original source code in GitHub along with some other detailed information, including the MIT license complete text." Style="{StaticResource TextBlockDefaultStyle}" />
+                    
+                    <TextBlock Style="{StaticResource TextBlockDefaultStyle}">
+                        <Hyperlink NavigateUri="https://github.com/KingMordas/ASpaceGame" RequestNavigate="Hyperlink_RequestNavigate">
+                            https://github.com/KingMordas/ASpaceGame
+                        </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+                
+            </StackPanel>
+            
+        </Grid>
+        
+    </Grid>
+    
+</Page>
