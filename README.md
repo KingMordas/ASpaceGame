@@ -1,8 +1,16 @@
 ﻿# ASpaceGame
 
-![Work in Progress](https://img.shields.io/badge/status-WIP-orange)
+![GitHub Release Date](https://img.shields.io/github/release-date/KingMordas/ASpaceGame)
+![GitHub Release](https://img.shields.io/github/v/release/KingMordas/ASpaceGame)
+![GitHub License](https://img.shields.io/github/license/KingMordas/ASpaceGame)
+<br>
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/KingMordas/ASpaceGame/total)
+![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/KingMordas/ASpaceGame/latest/total)
+![GitHub forks](https://img.shields.io/github/forks/KingMordas/ASpaceGame?style=flat)
+![GitHub watchers](https://img.shields.io/github/watchers/KingMordas/ASpaceGame?style=flat)
 <br>
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+![GitHub branch check runs](https://img.shields.io/github/check-runs/KingMordas/ASpaceGame/main)
 
 ## Introduction
 
@@ -19,6 +27,16 @@ I want to create something of mine which is **inspired** by that old software, b
 > I'm not going to use any references to Star Trek or any other copyrighted material, coming up with my own names, ideas and concepts.
 >
 > Please, be aware that most of the terminology used in Star Trek has become very common in sci-fi productions (i.e. warp drive, shields, etc.); I'll do my best to try to avoid them when possible. Should you find something that is not appropriate, please let me know and I'll do my best to remove it.
+
+## How to
+
+### Core Game Mechanics
+
+Several game mechanics are required for the software to properly work as intended.
+
+In order to have these resources properly created and available at runtime, you need to execute the `ASpaceGame.CoreComponents.ASpaceGameStarter.Start()` from your developed UI; the method represents an idempotent series of instructions finalized to create the above mentioned game mechanics.
+
+> **Note**: The `ASpaceGame.CoreComponents.Officer` class is a core mechanics that requires the user to manually create some officers to be later assigned to the various starships; it is actually not covered by the initialization process.
 
 ## Contributing
 

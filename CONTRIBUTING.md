@@ -18,6 +18,8 @@ I will attempt to look at issues as soon as possible, but remember that the proj
 - Ensure your code follows the project's coding standards.
 - Submit a pull request with a detailed description of your changes.
 
+> Please note that the submission of a Pull Request does not guarantee that the change will be incorporated into the repository; every change is subject to the approval by the owner of the repository.
+
 ### List of all default branches
 
 #### main
