@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish-latest-version:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Get Latest Code
